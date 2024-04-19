@@ -77,18 +77,18 @@ This may either be code you found online for a similar project or could be code 
 You must also \textbf{write a small analysis and description for each} of the diagrams/graphs that you include, you can use the caption feature to do this. \\ \\ \\ \\
 
 So far, we have experimented with using the Spotify 1,000,000 playlist dataset which contains the track lists of one million playlists with over two million tracks from three hundred thousand artists
-In addition to the playlist and track names, the dataset also contains useful meta-data about the playlist like the like count and the playlist duration. \\ \\ \\
+In addition to the playlist and track names, the dataset also contains useful meta-data about the playlist like the like count and the playlist duration. \\ \\
 
 In order to begin working on the dataset, most of the work that we have done so far has been related to data-handling and formatting. In the main.py file, we began by writing helper functions to seperate the
 spliced data stored in json files, into pandas dataframes using the load\_df function. After, we then use process\_data function to convert each dataframe into a csv object that stores the processed data in order
 to save computation. Within this function we also change the format of each row so that it is flat, by sorting each row by individual track instead of by playlist. This is because the playlist lengths vary and
-the shape of the playlist format is difficult to work with. The old format transforms and reduces the data:
-from the form: \{ PLAYLIST: \{NAME: XXX, TRACKLIST: [(multiple element list...)], more meta data, etc...\}\} \\ \\to the form: \{ TRACK: \{NAME: XXX, ARTIST: XXX, ALBUM: XXX PLAYLIST: XXX\} \} \\ \\ 
-Additionally, this helps with cases where tracks exist in multiple playlists at the same time as it is easier to access that information \\ \\ \\
+the shape of the playlist format is difficult to work with. The old format transforms and reduces the data: \\
+from the form: \{ PLAYLIST: \{NAME: XXX, TRACKLIST: [(multiple element list...)], more meta data, etc...\}\} \\ \\to the form: \{ TRACK: \{NAME: XXX, ARTIST: XXX, ALBUM: XXX PLAYLIST: XXX\} \} \\
+Additionally, this helps with cases where tracks exist in multiple playlists at the same time as it is easier to access that information \\ \\
 
 After this, we use dictionaries to assign numerical values corresponding to each track name, artist name, album name, and playlist name in order to allow us to use a k-means algorithm on the data. We have experimented
 using scikit learn in order to begin to try to cluster the tracks into groups. As far as how many clusters and what other relevant features we should use, will involve a lot of parameterization and testing to figure out.
-You can see some of our initial results below. \\ \\ \\
+You can see some of our initial results below. \\ \\
 
 \begin{figure}[htb]
     \centering
