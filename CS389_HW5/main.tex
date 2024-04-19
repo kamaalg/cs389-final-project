@@ -71,11 +71,6 @@ This is the paper from 2022, it talks about other recommendation system implemen
 This paper was written in 2019, it talks about the problems of classical autoencoder, and how variational autoencoder can solve those issues, by encoding input as a single point, VAE encodes it as a distribution over the latent space. It also talks about mathematical details of VAEs and at the end it introduces the counterpart for VAEs, and talks about  how GANs are more widespread than VAEs because how mathematically simple they are
 \section{Preliminary / exploratory results (50 points)}
 
-For this section I am going to force you to get some code working cause that's one of the things that holds projects back the most.
-You must have some code working here (though it doesn't need to work the way you want yet) and \textbf{include at least 2 diagrams} of results you got from your first experiments/tests -- also, \textbf{label you axes}. \\ \\
-This may either be code you found online for a similar project or could be code you wrote yourself, but you must have it working on your computer. \\ \\
-You must also \textbf{write a small analysis and description for each} of the diagrams/graphs that you include, you can use the caption feature to do this. \\ \\ \\ \\
-
 So far, we have experimented with using the Spotify 1,000,000 playlist dataset which contains the track lists of one million playlists with over two million tracks from three hundred thousand artists
 In addition to the playlist and track names, the dataset also contains useful meta-data about the playlist like the like count and the playlist duration. \\ \\
 
@@ -83,7 +78,7 @@ In order to begin working on the dataset, most of the work that we have done so 
 spliced data stored in json files, into pandas dataframes using the load\_df function. After, we then use process\_data function to convert each dataframe into a csv object that stores the processed data in order
 to save computation. Within this function we also change the format of each row so that it is flat, by sorting each row by individual track instead of by playlist. This is because the playlist lengths vary and
 the shape of the playlist format is difficult to work with. The old format transforms and reduces the data: \\
-from the form: \{ PLAYLIST: \{NAME: XXX, TRACKLIST: [(multiple element list...)], more meta data, etc...\}\} \\ \\to the form: \{ TRACK: \{NAME: XXX, ARTIST: XXX, ALBUM: XXX PLAYLIST: XXX\} \} \\
+from the form: \{ PLAYLIST: \{NAME: XXX, TRACKLIST: [(multiple element list...)], more meta data, etc...\}\} \\to the form: \{ TRACK: \{NAME: XXX, ARTIST: XXX, ALBUM: XXX PLAYLIST: XXX\} \} \\
 Additionally, this helps with cases where tracks exist in multiple playlists at the same time as it is easier to access that information \\ \\
 
 After this, we use dictionaries to assign numerical values corresponding to each track name, artist name, album name, and playlist name in order to allow us to use a k-means algorithm on the data. We have experimented
