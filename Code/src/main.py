@@ -111,7 +111,7 @@ for index, row in df.iterrows():
     else:
         df.at[index, 'playlist'] = playlist_dict[playlist]
 
-kmeans = KMeans(n_clusters=30)
+kmeans = KMeans(n_clusters=10)
 
 kmeans.fit(df)
 
@@ -125,17 +125,23 @@ df['cluster'] = cluster_labels
 # print("Cluster Centers:", cluster_centers)
 # print(df)
 
-
-input_songs = [1, 2003, 54, 204, 1912, 21]
+input_songs = [2003, 54, 204, 1912, 21]
 input_clusters = kmeans.predict(df[df['track'].isin(input_songs)][['track', 'artist', 'album', 'playlist']])
 recommendations = df[df['cluster'].isin(input_clusters)]
 recommendations = recommendations[~recommendations['track'].isin(input_songs)]
-recommendations = recommendations[:len(input_songs)]
+recommendations = recommendations[:8000]
 
 track_dict = {v: k for k, v in track_dict.items()}
 artist_dict = {v: k for k, v in artist_dict.items()}
 album_dict = {v: k for k, v in album_dict.items()}
 playlist_dict = {v: k for k, v in playlist_dict.items()}
+
+sns.scatterplot(data = df, x = 'track', y = 'playlist', hue = kmeans.labels_)
+plt.show()
+sns.scatterplot(data = df, x = 'artist', y = 'playlist', hue = kmeans.labels_)
+plt.show()
+sns.scatterplot(data = df, x = 'artist', y = 'track', hue = kmeans.labels_)
+plt.show()
 
 recommendations['track'] = recommendations['track'].map(track_dict)
 recommendations['artist'] = recommendations['artist'].map(artist_dict)
@@ -143,3 +149,5 @@ recommendations['album'] = recommendations['album'].map(album_dict)
 recommendations['playlist'] = recommendations['playlist'].map(playlist_dict)
 
 print(recommendations)
+
+
