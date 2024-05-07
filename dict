@@ -1,0 +1,45 @@
+import re
+
+# Define a function to parse the text file and extract the information
+def parse_text(file_path):
+    songs = []
+    with open(file_path, 'r', encoding='utf-8') as file:
+        current_song = None
+        song_text = ""
+        for line in file:
+            if not line.strip():
+             continue
+            # Check if the line contains the word "User" followed by digits
+            user_match = re.match(r'User\d+', line)
+
+            if user_match:
+                # If there was a previous song, add it to the list
+                if current_song:
+                    print("Done")
+                    songs.append(current_song)
+                # Initialize a new song dictionary
+                current_song = {}
+            else:
+                # Extract the information from the line
+                if 'Title:' in line:
+                    current_song['Title'] = line.split(': ')[1].strip()
+                elif 'Artist:' in line:
+                    current_song['Artist'] = line.split(': ')[1].strip()
+                elif 'Label:' in line:
+                    current_song['Label'] = line.split(':')[1]
+                else:
+                    # Check if 'User' appears in the line, indicating the start of new lyrics
+
+
+                    song_text+=line
+                    
+                    current_song['Lyrics'] = song_text
+
+        # Add the last song to the list after the loop ends
+        if current_song:
+            songs.append(current_song)
+    return songs
+
+# Example usage
+file_path = 'Lyrics.txt'
+songs_list = parse_text(file_path)
