@@ -17,4 +17,4 @@
    - If the model predicts the user will like a song, it outputs a score of `1`.
 
 This dynamic process ensures that the recommendation engine adapts to individual preferences, offering tailored song suggestions based on user feedback.
-![Music Visualization](https://media.giphy.com/media/3o6gE2cCYzkgP0LQXS/giphy.gif)
+![Music Animation](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
