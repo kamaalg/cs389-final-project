@@ -19,3 +19,11 @@
    - If the model predicts the user will like a song, it outputs a score of `1`.
 
 This dynamic process ensures that the recommendation engine adapts to individual preferences, offering tailored song suggestions based on user feedback.
+
+## Project Structure
+```
+├── src/                 # Source code in .ipynb format
+├── data/          # Storage of all the custom datasets and temporary json files
+├── embeddings               # Directory of all the saved vector embeddings
+├── utils           # Folder of all auxiliary sources
+├── README.md              # Project documentation
