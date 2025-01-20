@@ -27,3 +27,22 @@ This dynamic process ensures that the recommendation engine adapts to individual
 ├── embeddings     # Directory of all the saved vector embeddings
 ├── utils          # Folder of all auxiliary sources
 ├── README.md      # Project documentation
+```
+## Running Instructions
+1. **Install Dependencies**:  
+   Ensure all prerequisites are installed as outlined in the prerequisites section.
+
+   ```
+   python -m pip install --upgrade pip
+   pip install pytorch
+   pip install numpy
+   pip install sklearn
+   ```
+   2. **Run a program**:
+   Use the following command to test a workflow using Promptflow:
+```
+   python main2.py
+
+```
+If you've converted the notebook to a Python script, use the command above.
+Otherwise, open the Jupyter Notebook and run all the cells manually.
