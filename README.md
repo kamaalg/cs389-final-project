@@ -38,7 +38,7 @@ This dynamic process ensures that the recommendation engine adapts to individual
    pip install numpy
    pip install sklearn
    ```
-   2. **Run a program**:
+2. **Run a program**:
    Use the following command to test a workflow using Promptflow:
 ```
    python main2.py
