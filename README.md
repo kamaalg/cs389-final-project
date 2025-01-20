@@ -1,5 +1,5 @@
 # Song Recommendation Engine
-![Music Animation]((https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdml4MnF5dG9kdTZ6YWlqaWhiN3BoMTU2cDJ5dmVkdWVncGdnZmIzMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tqfS3mgQU28ko/giphy.gif))
+![Music Animation](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdml4MnF5dG9kdTZ6YWlqaWhiN3BoMTU2cDJ5dmVkdWVncGdnZmIzMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tqfS3mgQU28ko/giphy.gif)
 ---
 ## Overview
 
