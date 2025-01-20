@@ -1,4 +1,6 @@
 # Song Recommendation Engine
+![Music Animation]((https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdml4MnF5dG9kdTZ6YWlqaWhiN3BoMTU2cDJ5dmVkdWVncGdnZmIzMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tqfS3mgQU28ko/giphy.gif))
+---
 ## Overview
 
 **Song Recommendation Engine** is an innovative project that leverages neural networks to create personalized song recommendations. The system is designed to learn user preferences from a custom dataset by mapping song embeddings to user feedback. Here's how it works:
@@ -17,4 +19,3 @@
    - If the model predicts the user will like a song, it outputs a score of `1`.
 
 This dynamic process ensures that the recommendation engine adapts to individual preferences, offering tailored song suggestions based on user feedback.
-![Music Animation](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
